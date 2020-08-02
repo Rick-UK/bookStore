@@ -1,0 +1,89 @@
+.header
+  @media all and (min-width: $desktop-width)
+    width: $desktop-width
+
+  &__index-link
+    @media all and (min-width: $desktop-width)
+      padding: 0 0 0 30px      
+
+  &__cart
+    @media all and (min-width: $desktop-width)
+      margin: 0 30px 0 0
+
+.desktop-menu
+  &__nav  
+    @media all and (min-width: $desktop-width)
+      display: flex
+      justify-content: space-between     
+      width: 550px
+
+  &__link
+    @media all and (min-width: $desktop-width)  
+      font-weight: 700
+      color: black  
+      border-bottom: 2px solid $page-header--bg-color
+      transition: 0.2s all
+
+  &__link:hover
+    color: #81b3d2 
+    border-bottom: 2px solid #81b3d2    
+
+  &__link:active   
+    color: #678fa8 
+    border-bottom: 2px solid #678fa8 
+
+.mobile-menu
+  &__burger
+    @media all and (min-width: $desktop-width)
+      display: none     
+
+  &__label
+    @media all and (min-width: $desktop-width)
+      display: none     
+
+  &__nav
+    @media all and (min-width: $desktop-width)
+      display: none        
+
+  &__link
+    @media all and (min-width: $desktop-width)
+      display: none  
+
+.main
+  @media all and (min-width: $desktop-width)
+    width: $desktop-width 
+    display: flex
+
+.average-price
+  @media all and (min-width: $desktop-width) 
+    border-bottom: 1px solid #e2e8f0
+      
+
+.catalog
+  @media all and (min-width: $desktop-width)
+    width: 660px
+    border: none
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+   
+
+  &__item
+    @media all and (min-width: $desktop-width)
+      width: 330px 
+      border-left: 1px solid #e2e8f0 
+      z-index: 1; 
+      background-color: $page-header--bg-color
+      margin-right: auto
+
+  &__extra-item   
+    @media all and (min-width: $desktop-width)
+      width: 320px   
+      min-height: 122px
+      z-index: 0; 
+      border-left: 1px solid #e2e8f0
+      border-bottom: none 
+
+
+.filter
+  border-top: 1px solid #e2e8f0;

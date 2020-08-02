@@ -1,0 +1,453 @@
+.header
+  width: $mobile-width 
+  min-height: 50px
+  background-color: $page-header--bg-contrast-color
+  position: relative
+  margin: 0 auto
+  padding: 0
+  display: flex
+  flex-direction: column-reverse
+  &__section
+    padding: 0px 5px 0 5px
+    background-color: white;
+
+  &__top
+    min-height: 50px
+    display: flex
+    justify-content: space-between 
+    align-items: center 
+
+  &__index-link
+    font-size: 20px 
+    padding: 0 0 0 5px
+    text-decoration: none;
+    font-weight: 700
+
+  &__index-link:hover
+    color: black
+
+  &__index-link:active   
+    color: black
+
+  &__index-link:link
+    color: black
+
+  &__index-link:visited 
+    color: black  
+
+  &__cart
+    margin: 0 58px 0 0  
+    padding: 4px 0 0 0
+
+.desktop-menu__nav
+  display: none
+
+.mobile-menu
+  &__burger
+    position: absolute
+    top: 0
+    left: 0
+    margin: -1px
+    width: 1px
+    height: 1px
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    &:checked ~ nav
+      display: block
+    
+    &:checked ~ label::before
+      top: 239px
+    
+    &:checked ~ label::after
+      display: block
+
+  &__label
+    height: 0px
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      top: 17px
+      right: 20px
+      width: 23px
+      height: 22px
+      background-color: $page-header--bg-color
+      background-image: url(../img/icon-menu.png)
+      cursor: pointer
+    
+    &::after
+      content: ""
+      display: none
+      position: absolute
+      top: 17px
+      right: 20px
+      width: 23px
+      height: 22px
+      background-image: url(../img/icon-cross.png)
+      z-index: 0
+      cursor: pointer 
+
+  &__span
+    font-size: 0
+
+  &__nav
+    display: none
+  
+
+  a:first-child
+    padding-right: 42px
+    padding-left: 42px
+  
+
+  a:last-child
+    box-shadow: inset 0px -2px 4px 0px rgba(0, 0, 0, 0.2)
+  
+
+  &__link
+    display: inline-block
+    box-sizing: border-box
+    text-transform: uppercase
+    font-size: 18px
+    line-height: 18px
+    font-weight: 700
+    color: $page-header__link--color
+    background-color: $page-header__link--bg-color
+    text-align: center
+    vertical-align: middle
+    min-height: 55px
+    width: 100%
+    padding: 18px 45px 18px 18px
+    border-top: 1px solid #9ac2db
+    border-bottom: 1px solid #678fa8
+    transition: background-color 0.2s,color 0.2s
+    overflow: hidden
+    text-overflow: ellipsis
+
+    &:hover
+      background-color: $page-header__link--bg-color-hover
+    
+    &:active
+      background-color: $page-header__link--bg-color-active
+      color: $page-header__link--color-active
+    
+  
+
+  &__logo-wrap
+    min-height: 55px
+    width: 100%
+    background-color: $page-header--bg-color
+    position: relative
+  
+  &__logo-img
+    position: absolute
+    display: block
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 2
+
+.main
+  width: 320px  
+  margin: 0 auto
+  background-color: $page-header--bg-color
+
+.search
+  width: 320px
+  background-color: white
+  
+
+  &__form
+    width: 310px
+    margin: 0 auto 0px auto
+    padding: 5px 0 5px 0
+    display: flex
+    position: relative
+    justify-content: space-between
+
+  &__input  
+    width: 240px
+    height: 30px
+    outline: none
+    border: 2px solid #81b3d2
+    border-radius: 5px
+    padding: 0px 5px 2px 5px
+    font-size: 16px 
+    line-height: 26px
+
+  &__input:hover  
+    border-color: #669ec0
+
+  &__input:focus  
+    border-color: #669ec0
+
+  &__input:active   
+    border-color: #5496bd
+
+  &__input::placeholder
+    font-size: 16px 
+    font-weight: 400
+    line-height: 20px
+
+  &__label  
+    top: 0
+    left: 0
+    position: absolute
+    opacity: 0
+    display: none
+
+  &__button
+    width: 60px 
+    height: 30px 
+    border: 2px solid #81b3d2
+    border-radius: 5px
+    padding: 0px 2px 0px 2px
+    background-color: white
+    font-size: 16px 
+    line-height: 20px
+    cursor: pointer
+    overflow: hidden
+    text-overflow: ellipsis
+
+  &__button:hover  
+    border-color: #669ec0
+    background-color: #669ec0
+      
+  &__button:focus  
+    border-color: #669ec0
+    background-color: #669ec0
+    outline: none
+
+  &__button:active   
+    border-color: #5496bd
+    background-color: white
+
+.average-price
+  width: $mobile-width
+  min-height: 40px
+  border-top: 1px solid #e2e8f0;
+  text-align: center
+  padding: 8px 8px 8px 8px
+
+  &__text
+    overflow: hidden
+    text-overflow: ellipsis
+
+.filter
+  width: 320px
+  min-height: 40px
+  &__details 
+	  font-size: 14px
+	  width: $mobile-width
+	  background: #ffffff
+	  position: relative
+    min-height: 40px
+
+  &__summary
+    padding: 10px
+    min-height: 40px
+
+  &__summary:focus 
+    outline: none	
+
+  &__summary::-webkit-details-marker 
+	  display: none  
+
+  &__summary-title
+    padding: 0 0 0 3px
+    font-size: 16px
+
+  &__summary-title:hover 
+		cursor: pointer 
+
+  &__option
+    height: 25px 
+    border: 2px solid #81b3d2
+    border-radius: 5px   
+	
+  &__content
+    padding: 10px
+    border-top: 1px solid #e2e8f0
+
+
+  &__chevron-up svg 
+	  opacity: 0.5
+	
+  &__form
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 60px
+    position: relative
+
+  &__form:after 
+    content: ""
+    display: block
+    border-style: solid
+    border-width: 6px 5px 0 5px
+    border-color: #000 transparent transparent transparent
+    pointer-events: none
+    position: absolute
+    top: 13px
+    right: 9px
+    z-index: 1
+    margin-top: -3px; 
+
+  &__select
+    height: 25px
+    outline: none
+    display: block
+    padding: 0px 10px 2px 10px
+    background: none
+    border: 2px solid #81b3d2
+    border-radius: 5px
+    appearance: none
+    font-size: 16px
+    line-height: 16px
+    cursor: pointer
+
+  &__select:hover  
+    border-color: #669ec0
+    background-color: #669ec0
+
+      
+  &__select:focus  
+    border-color: #669ec0
+    background-color: white
+    outline: none
+
+  &__select:active   
+    border-color: #5496bd
+    background-color: white  
+
+
+  &__button
+    height: 25px 
+    border: 2px solid #81b3d2
+    border-radius: 5px
+    padding: 0px 5px 2px 5px
+    background-color: white
+    font-size: 16px 
+    line-height: 16px
+    cursor: pointer
+    overflow: hidden
+    text-overflow: ellipsis
+    
+
+  &__button:hover  
+    border-color: #669ec0
+    background-color: #669ec0
+
+      
+  &__button:focus  
+    border-color: #669ec0
+    background-color: #669ec0
+    outline: none
+
+  &__button:active   
+    border-color: #5496bd
+    background-color: white
+
+  
+
+.filter__chevron-up,
+.filter__chevron-down 
+	pointer-events: none
+	position: absolute
+	top: 10px
+	right: 10px
+	background: #ffffff
+
+		
+.catalog
+  width: 320px
+  background-color: white
+  border-top: 1px solid #e2e8f0
+  position: relative
+
+  &__item
+    width: 320px
+    display: flex
+    justify-content: space-around
+    align-items: flex-start
+    padding: 5px 0 5px 0
+    border-bottom: 1px solid #e2e8f0
+
+  &__extra-item
+    width: 320px
+    min-height: 130px
+    text-align: center
+    padding: 5px 5px 5px 5px
+    border-bottom: 1px solid #e2e8f0
+    color: red
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1;
+    background-color: $page-header--bg-color
+
+  
+  &__picture
+    width: 115px
+    overflow: hidden
+    object-fit: cover
+    
+
+  &__picture img
+    width: 115px
+    object-fit: contain
+
+  &__picture source
+    object-fit: contain  
+
+  &__info-wrap
+    width: 175px  
+    min-height: 130px
+
+  &__item-author
+    padding: 0 0 5px 0  
+    word-wrap: break-word
+
+  &__item-book-title
+    font-size: 18px
+    word-wrap: break-word
+    max-height: 80px
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow: hidden
+    text-overflow: ellipsis
+
+  &__item-price
+    padding: 10px 0 5px 0  
+    word-wrap: break-word 
+
+  &__item-in-cart
+    max-width: 175px
+    min-height: 30px
+    padding: 0 5px 0 5px
+    font-size: 16px
+    line-height: 16px
+    font-weight: 700
+    border: none
+    border-radius: 5px
+    background-color: #acff38
+    overflow: hidden
+    text-overflow: ellipsis
+    outline: none
+
+  &__item-in-cart:hover  
+    border-color: #669ec0
+    background-color: #669ec0
+
+      
+  &__item-in-cart:focus  
+    border-color: #669ec0
+    background-color: #669ec0
+    outline: none
+
+  &__item-in-cart:active   
+    border-color: #5496bd
+    background-color: white  	
+
+
+
